@@ -1,0 +1,87 @@
+<html>
+<HTML lang="es">
+<head>
+     <meta charset="UTF-8">
+     <title>Porsche</title>
+     <style>
+        .zoom {
+            width: 150px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .zoom.grande {
+            width: 400px;
+            display: block;
+            margin: auto;
+        }
+        .ocultar {
+            display: none;
+        }
+     </style>   
+</head>
+<body>
+     <h1>Porsche</h1>
+<table border="1">
+    <tr>
+	<td align="center" class="contenedor">
+ 	     <img src="D:\proyecto\Porsche.jpg" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: pink;"> Porsche 911 GT3rs </span> </strong> </p>
+             <p class="descripcion">Es un deportivo de alto rendimiento diseñado para la pista pero homologado para la calle. Cuenta con un motor bóxer de 6 cilindros y 4.0 litros, capaz de generar 525 caballos de fuerza. Su aceleración de 0 a 100 km/h en 3.1 segundos. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Porsche2.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: pink;"> Porsche 356 (1948-1965) </span> </strong> </p>
+             <p class="descripcion">Fue el primer modelo de Porsche, un deportivo ligero con motor trasero y diseño aerodinámico. Su éxito sentó las bases para el ADN de la marca. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Porsche3.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: pink;"> Porsche 911 (Desde 1964) </span> </strong> </p>
+             <p class="descripcion">El modelo más emblemático de Porsche, con su característico motor bóxer de seis cilindros montado en la parte trasera. Ha evolucionado a lo largo de los años manteniendo su esencia deportiva. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Porsche4.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: pink;"> Porsche 917 (1969-1971) </span> </strong> </p>
+             <p class="descripcion">Un legendario coche de carreras que dominó Le Mans, con su potente motor de 12 cilindros y un diseño revolucionario que marcó la historia del automovilismo. </p>
+        </td>
+       </tr>
+       <tr>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Porsche5.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: pink;"> Porsche 959 (1986-1993) </span> </strong> </p>
+             <p class="descripcion">Un superdeportivo avanzado para su época, con tracción integral, aerodinámica optimizada y un motor biturbo de 450 CV. Fue el precursor de la tecnología moderna en los deportivos. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Porsche6.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: pink;"> Porsche Boxster (Desde 1996) </span> </strong> </p>
+             <p class="descripcion">Un roadster asequible que ayudó a revitalizar la marca en los años 90. Su motor central y su equilibrio dinámico lo convirtieron en un favorito entre los entusiastas de los deportivos. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Porsche7.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: pink;"> Porsche Cayenne (Desde 2002) </span> </strong> </p>
+             <p class="descripcion">El SUV que salvó a Porsche financieramente. Aunque polémico al principio, demostró que un todoterreno de lujo podía conservar el ADN deportivo de la marca. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Porsche8.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: pink;"> Porsche 918 Spyder (2013-2015) </span> </strong> </p>
+             <p class="descripcion">Un hiperauto híbrido con tecnología de Fórmula 1. Con 887 CV, fue capaz de establecer récords en Nürburgring y mostrar el futuro de la electrificación en Porsche. </p>
+        </td>
+<script>
+        function mostrarSoloEsta(imagenSeleccionada) {
+            var contenedores = document.querySelectorAll(".contenedor");
+            var contenedorSeleccionado = imagenSeleccionada.closest(".contenedor");
+            
+            if (imagenSeleccionada.classList.contains("grande")) {
+                contenedores.forEach(cont => cont.classList.remove("ocultar"));
+                imagenSeleccionada.classList.remove("grande");
+            } else {
+                contenedores.forEach(cont => {
+                    if (cont !== contenedorSeleccionado) {
+                        cont.classList.add("ocultar");
+                    }
+                });
+                imagenSeleccionada.classList.add("grande");
+            }
+        }
+</script>
+</body>
+</html>

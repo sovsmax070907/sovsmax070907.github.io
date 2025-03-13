@@ -1,0 +1,91 @@
+<html>
+<HTML lang="es">
+<head>
+     <meta charset="UTF-8">
+     <title>BMW</title>
+     <style>
+        .zoom {
+            width: 150px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .zoom.grande {
+            width: 400px;
+            display: block;
+            margin: auto;
+        }
+        .ocultar {
+            display: none;
+        }
+     </style>     
+</head>
+<body>
+     <h1>Audi</h1>
+
+<table border="1">
+    <tr>
+	<td align="center" class="contenedor">
+ 	     <img src="D:\proyecto\Audi1.jpg" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: brown;"> Audi Quattro (1980-1991) </span> </strong> </p>
+<p class="descripcion">Este modelo revolucionó el mundo del automovilismo al ser el primer turismo con tracción integral, lo que lo hizo dominante en el Campeonato Mundial de Rally (WRC). Su motor de 2.1 litros turbo entregaba 203 CV y lo convirtió en un referente del alto rendimiento en condiciones extremas​. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Audi2.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: brown;"> Audi RS2 Avant (1994-1995) </span> </strong> </p>
+<p class="descripcion">Desarrollado en colaboración con Porsche, este modelo combinaba la practicidad de una carrocería familiar con un motor 2.2 litros turbo de 315 CV. Su tracción integral le permitía alcanzar los 100 km/h en menos de 5 segundos, estableciendo un nuevo estándar para los coches familiares deportivos​. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Audi3.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: brown;"> Audi TT (1998-presente) </span> </strong> </p>
+<p class="descripcion">Con un diseño innovador, el TT se convirtió en un ícono de los deportivos compactos. Su evolución ha mantenido el equilibrio entre elegancia y alto rendimiento, con versiones que alcanzan hasta 400 CV en la variante TT RS​. </p> 
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Audi4.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: brown;"> Audi R8 (2006-presente) </span> </strong> </p>
+<p class="descripcion">Este superdeportivo, inspirado en la competición de Le Mans, cuenta con un motor V10 de hasta 620 CV y tecnología de tracción quattro. Su diseño aerodinámico y su potencia lo posicionan como uno de los Audi más rápidos y exclusivos. </p>
+       </td>
+       </tr>
+       <tr>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Audi5.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: brown;"> Audi A8 (1994-presente) </span> </strong> </p>
+<p class="descripcion">Representando el lujo y la innovación, el A8 fue pionero en el uso de carrocería de aluminio. Su gama de motores ha incluido opciones V8 y W12, convirtiéndolo en una referencia entre las berlinas de alta gama​​. </p>
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Audi6.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: brown;"> Audi RS6 Avant (2002-presente) </span> </strong> </p>
+<p class="descripcion">Con el alma de un superdeportivo en un cuerpo de familiar, el RS6 Avant combina un motor V8 biturbo de 600 CV con tracción quattro, logrando un 0-100 km/h en solo 3.6 segundos​. </p>
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Audi7.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: brown;"> Audi A3 (1996-presente) </span> </strong> </p>
+<p class="descripcion">Este modelo revolucionó el segmento de los compactos premium, combinando diseño, tecnología y versatilidad. A lo largo de sus generaciones, ha adoptado opciones híbridas y eléctricas para mantenerse a la vanguardia​. </p>
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Audi8.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: brown;">  Audi Q7 (2005-presente) </span> </strong> </p>
+<p class="descripcion">Como el primer SUV de lujo de la marca, el Q7 ha destacado por su comodidad, tecnología avanzada y opciones mecánicas potentes, incluyendo versiones híbridas enchufables y diésel de alto rendimiento.</p>
+	</td>
+    </tr>
+</table>
+
+<script>
+        function mostrarSoloEsta(imagenSeleccionada) {
+            var contenedores = document.querySelectorAll(".contenedor");
+            var contenedorSeleccionado = imagenSeleccionada.closest(".contenedor");
+            
+            if (imagenSeleccionada.classList.contains("grande")) {
+                contenedores.forEach(cont => cont.classList.remove("ocultar"));
+                imagenSeleccionada.classList.remove("grande");
+            } else {
+                contenedores.forEach(cont => {
+                    if (cont !== contenedorSeleccionado) {
+                        cont.classList.add("ocultar");
+                    }
+                });
+                imagenSeleccionada.classList.add("grande");
+            }
+        }
+</script>
+</body>
+</html>

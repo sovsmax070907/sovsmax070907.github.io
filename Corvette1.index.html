@@ -1,0 +1,91 @@
+<html>
+<HTML lang="es">
+<head>
+     <meta charset="UTF-8">
+     <title>Corvette</title>
+     <style>
+        .zoom {
+            width: 150px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .zoom.grande {
+            width: 400px;
+            display: block;
+            margin: auto;
+        }
+        .ocultar {
+            display: none;
+        }
+     </style>     
+</head>
+<body>
+     <h1>Corvette</h1>
+
+     <table id="tabla" border="1">
+    <tr>
+            <td align="center" class="contenedor">
+ 	     <img src="D:\proyecto\Corvette1.jpg" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: purple;"> Corvette C1 (1953-1962) </span> </strong>                                  
+             <p class="descripcion">El primer Corvette de la historia, con un diseño inspirado en los autos deportivos europeos. Se fabricó con una carrocería de fibra de vidrio y comenzó con un motor de seis cilindros en línea, pero luego incorporó un V8, estableciendo la base para el desempeño de la marca​. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Corvette2.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: purple;"> Corvette C2 Sting Ray (1963-1967) </span> </strong> </p>
+             <p class="descripcion">Conocido como el "Sting Ray", introdujo el diseño de faros ocultos y la icónica ventana dividida en el modelo de 1963. Fue el primer Corvette con suspensión trasera independiente y ofrecía motores V8 de hasta 435 caballos de fuerza​. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Corvette3.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: purple;"> Corvette C3 (1968-1982) </span> </strong> </p>
+             <p class="descripcion">Caracterizado por su diseño más aerodinámico y musculoso, el C3 ofreció una amplia gama de motores V8, incluido el potente L88 de 7.0 litros con hasta 430 CV. Se convirtió en el Corvette más vendido de su época​. </p> 
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Corvette4.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: purple;"> Corvette C4 (1983-1996) </span> </strong> </p>
+             <p class="descripcion">Revolucionó el diseño con un estilo más moderno y aerodinámico, además de avances tecnológicos como frenos antibloqueo y una suspensión mejorada. Su versión ZR1 destacaba con un motor LT5 de 375 CV​. </p>
+       </td>
+       </tr>
+       <tr>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Corvette5.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: purple;"> Corvette C7 Z06 (2014-2019) </span> </strong> </p>
+             <p class="descripcion">Uno de los Corvette más agresivos, con un motor V8 sobrealimentado de 6.2 litros que producía 650 CV. Su aerodinámica avanzada y tecnología de competición lo convirtieron en un referente del alto rendimiento​. </p>
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Corvette6.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: purple;"> Corvette Stingray C8 (2020-presente) </span> </strong> </p>
+             <p class="descripcion">Representa la mayor transformación en la historia del Corvette, con un motor central V8 de 6.2 litros y 495 CV, ofreciendo un equilibrio excepcional entre potencia y manejo. </p>
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Corvette7.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: purple;"> Corvette E-Ray (2023-presente) </span> </strong> </p>
+             <p class="descripcion">El primer Corvette híbrido y con tracción en las cuatro ruedas, combina un motor V8 con un sistema eléctrico para alcanzar 655 CV y una aceleración de 0 a 100 km/h en solo 2.5 segundos​. </p>
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Corvette8.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: purple;">  Corvette Z06 C8 (2023-presente) </span> </strong> </p>
+             <p class="descripcion">Inspirado en la competición, cuenta con un motor V8 LT6 de 5.5 litros con cigüeñal plano, generando 670 CV. Es el Corvette atmosférico más potente jamás fabricado y ofrece un desempeño superior en pista.</p>
+	</td>
+    </tr>
+</table>
+
+<script>
+        function mostrarSoloEsta(imagenSeleccionada) {
+            var contenedores = document.querySelectorAll(".contenedor");
+            var contenedorSeleccionado = imagenSeleccionada.closest(".contenedor");
+            
+            if (imagenSeleccionada.classList.contains("grande")) {
+                contenedores.forEach(cont => cont.classList.remove("ocultar"));
+                imagenSeleccionada.classList.remove("grande");
+            } else {
+                contenedores.forEach(cont => {
+                    if (cont !== contenedorSeleccionado) {
+                        cont.classList.add("ocultar");
+                    }
+                });
+                imagenSeleccionada.classList.add("grande");
+            }
+        }
+</script>
+</body>
+</html>

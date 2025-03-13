@@ -1,0 +1,91 @@
+<html>
+<HTML lang="es">
+<head>
+     <meta charset="UTF-8">
+     <title>Chevrolet Camaro</title>
+     <style>
+        .zoom {
+            width: 150px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .zoom.grande {
+            width: 400px;
+            display: block;
+            margin: auto;
+        }
+        .ocultar {
+            display: none;
+        }
+     </style>     
+</head>
+<body>
+     <h1>Chevrolet Camaro</h1>
+
+<table border="1">
+    <tr>
+	<td align="center" class="contenedor">
+ 	     <img src="D:\proyecto\Camaro1.jpg" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: lightblue;"> Camaro Z/28 1967 </span> </strong> </p>
+             <p class="descripcion">Diseñado para competir en la Trans-Am Series, este modelo tenía un motor V8 de 4.9 litros y se convirtió en un referente en las carreras de resistencia americanas. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Camaro2.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: lightblue;"> Camaro ZL1 1969 </span> </strong> </p>
+             <p class="descripcion">Equipado con un motor V8 de aluminio de 7.0 litros, fue uno de los modelos más potentes de su época y limitado a solo 69 unidades. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Camaro3.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: lightblue;"> Camaro SS 1970 </span> </strong> </p>
+             <p class="descripcion">Una de las versiones más populares, con un motor V8 de 350 hp y un diseño renovado que lo convirtió en un verdadero muscle car​. </p> 
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Camaro4.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: lightblue;"> Camaro 35th Anniversary 2002 </span> </strong> </p>
+             <p class="descripcion">Edición especial para conmemorar 35 años del Camaro, con un motor LS-1 V8 de 325 hp y detalles exclusivos en su diseño. </p>
+       </td>
+       </tr>
+       <tr>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Camaro5.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: lightblue;"> Camaro SS 2010 </span> </strong> </p>
+             <p class="descripcion">Tras ocho años fuera del mercado, el Camaro regresó con un motor V8 de 6.2 litros y 426 hp, combinando un diseño retro con tecnología moderna​. </p>
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Camaro6.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: lightblue;"> Camaro ZL1 2012 </span> </strong> </p>
+             <p class="descripcion">Un modelo de alto rendimiento con motor V8 sobrealimentado de 6.2 litros y 580 hp, suspensión Magnetic Ride Control y frenos Brembo​. </p>
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Camaro7.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: lightblue;"> Camaro 1LE 2013 </span> </strong> </p>
+             <p class="descripcion">Una versión mejorada del SS, con mejoras en la suspensión, frenos y aerodinámica, diseñado para ofrecer un mejor desempeño en pista​​. </p>
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Camaro8.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: lightblue;">  Camaro COPO </span> </strong> </p>
+             <p class="descripcion">Modelo de competición producido en cantidades limitadas para la NHRA, con motor V8 de 427 pulgadas cúbicas y sin homologación para carretera.</p>
+	</td>
+    </tr>
+</table>
+
+<script>
+        function mostrarSoloEsta(imagenSeleccionada) {
+            var contenedores = document.querySelectorAll(".contenedor");
+            var contenedorSeleccionado = imagenSeleccionada.closest(".contenedor");
+            
+            if (imagenSeleccionada.classList.contains("grande")) {
+                contenedores.forEach(cont => cont.classList.remove("ocultar"));
+                imagenSeleccionada.classList.remove("grande");
+            } else {
+                contenedores.forEach(cont => {
+                    if (cont !== contenedorSeleccionado) {
+                        cont.classList.add("ocultar");
+                    }
+                });
+                imagenSeleccionada.classList.add("grande");
+            }
+        }
+</script>
+</body>
+</html>

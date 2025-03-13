@@ -1,0 +1,93 @@
+<html>
+<HTML lang="es">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>BMW</title>
+     <style>
+        .zoom {
+            width: 150px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .zoom.grande {
+            width: 400px;
+            display: block;
+            margin: auto;
+        }
+        .ocultar {
+            display: none;
+        }
+
+     </style>     
+</head>
+<body>
+
+     <h1>BMW</h1>
+<table border="1">
+        </td>
+	<td align="center" class="contenedor">
+ 	     <img src="D:\proyecto\BMW.jpg" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: red;"> BMW M4 competition </span> </strong> </p>
+             <p class="descripcion">Este modelo combina lujo con un rendimiento extremo, ideal para quienes buscan una experiencia de conducción emocionante tanto en carretera como en pista. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\BMW2.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: red;"> BMW Serie 3 (G20) </span> </strong> </p>
+             <p class="descripcion">Es una de las berlinas deportivas más icónicas de la marca. En su última generación, combina diseño elegante, tecnología avanzada y motores eficientes, con opciones híbridas enchufables y deportivas. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\BMW3.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: red;"> BMW X5 (G05) </span> </strong> </p>
+             <p class="descripcion">SUV premium que combina lujo, espacio y rendimiento. Disponible con motores de combustión, híbridos enchufables y una versión deportiva M, ideal para quienes buscan versatilidad sin perder deportividad. </p> 
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\BMW4.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: red;"> BMW i4 </span> </strong> </p>
+             <p class="descripcion">Berlina coupé 100% eléctrica con un diseño dinámico y un rendimiento impresionante. Su versión más potente, el i4 M50, ofrece una aceleración y manejo dignos de un deportivo. </p>
+       </td>
+       </tr>
+       <tr>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\BMW5.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: red;"> BMW M3 (G80) </span> </strong> </p>
+             <p class="descripcion">Variante de alto rendimiento del Serie 3. Con un motor de hasta 510 CV y tracción total en su versión Competition, es una de las berlinas deportivas más emocionantes del mercado​. </p>
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\BMW6.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: red;"> BMW X7 </span> </strong> </p>
+             <p class="descripcion">SUV de lujo con tres filas de asientos, materiales de alta calidad y tecnología avanzada. Es la opción ideal para quienes buscan un vehículo espacioso con el ADN deportivo de BMW. </p>
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\BMW7.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: red;"> BMW iX </span> </strong> </p>
+             <p class="descripcion">SUV eléctrico insignia de la marca. Destaca por su diseño futurista, autonomía de hasta 600 km y tecnología avanzada en conectividad y asistencias a la conducción. </p>
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\BMW8.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: red;">  BMW Serie 5 (G60) </span> </strong> </p>
+             <p class="descripcion">Ofrece un equilibrio entre confort y deportividad. Su última generación incorpora un diseño moderno, opciones híbridas y una versión totalmente eléctrica, el i5.</p>
+	</td>
+    </tr>
+</table>
+</div>
+<script>
+        function mostrarSoloEsta(imagenSeleccionada) {
+            var contenedores = document.querySelectorAll(".contenedor");
+            var contenedorSeleccionado = imagenSeleccionada.closest(".contenedor");
+            
+            if (imagenSeleccionada.classList.contains("grande")) {
+                contenedores.forEach(cont => cont.classList.remove("ocultar"));
+                imagenSeleccionada.classList.remove("grande");
+            } else {
+                contenedores.forEach(cont => {
+                    if (cont !== contenedorSeleccionado) {
+                        cont.classList.add("ocultar");
+                    }
+                });
+                imagenSeleccionada.classList.add("grande");
+            }
+        }
+</script>
+</body>
+</html>

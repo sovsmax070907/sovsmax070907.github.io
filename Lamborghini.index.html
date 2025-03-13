@@ -1,0 +1,91 @@
+<html>
+<html lang="es">
+<head>
+     <meta charset="UTF-8">
+     <title>Lamborghini</title>
+     <style>
+        .zoom {
+            width: 150px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .zoom.grande {
+            width: 400px;
+            display: block;
+            margin: auto;
+        }
+        .ocultar {
+            display: none;
+        }
+     </style>     
+</head>
+<body>
+     <h1>Lamborghini</h1>
+
+     <table id="tabla" border="1">
+        <tr>
+            <td align="center" class="contenedor">
+                <img src="D:\proyecto\Lamborghini1.jpg" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+                <p class="descripcion"><strong><span style="color: gray;">Lamborghini Miura</span></strong></p>
+                <p class="descripcion">Considerado el primer superdeportivo de la historia, el Miura debutó en 1966 con un diseño revolucionario y un motor V12 de 3.9 litros que producía hasta 385 CV. Su estética elegante y sus prestaciones lo convirtieron en un referente del automovilismo deportivo.</p>
+            </td>
+            <td align="center" class="contenedor">
+                <img src="D:\proyecto\Lamborghini2.jpg" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+                <p class="descripcion"><strong><span style="color: gray;">Lamborghini Countach</span></strong></p>
+                <p class="descripcion">Lanzado en 1974, el Countach marcó una era con su diseño angular y puertas de tijera. Equipado con un motor V12 de 4.0 litros que producía 375 CV, fue un coche icónico de los años 70 y 80, influyendo en el diseño de futuros Lamborghini.</p>
+            </td>
+            <td align="center" class="contenedor">
+                <img src="D:\proyecto\Lamborghini3.jpg" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+                <p class="descripcion"><strong><span style="color: gray;">Lamborghini Diablo</span></strong></p>
+                <p class="descripcion">Presentado en 1990, el Diablo sustituyó al Countach con un diseño más refinado y aerodinámico. Contaba con un motor V12 de 5.7 litros y 492 CV, alcanzando velocidades superiores a los 320 km/h. Se convirtió en uno de los modelos más emblemáticos de la marca.</p>
+            </td>
+            <td align="center" class="contenedor">
+                <img src="D:\proyecto\Lamborghini4.jpg" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+                <p class="descripcion"><strong><span style="color: gray;">Lamborghini Murciélago</span></strong></p>
+                <p class="descripcion">Este modelo, lanzado en 2001, fue el último con motor V12 antes de la era de Audi en Lamborghini. Con 580 CV en su versión inicial y una evolución hasta 670 CV en el LP 670-4 SV, fue un superdeportivo que combinaba agresividad y elegancia.</p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" class="contenedor">
+                <img src="D:\proyecto\Lamborghini5.jpg" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+                <p class="descripcion"><strong><span style="color: gray;">Lamborghini Gallardo</span></strong></p>
+                <p class="descripcion">Fabricado entre 2003 y 2013, el Gallardo fue uno de los modelos más vendidos de la marca con más de 14,000 unidades. Equipado con un motor V10 de 5.0 litros, su potencia iba desde los 500 hasta los 570 CV en su versión Superleggera.</p>
+            </td>
+            <td align="center" class="contenedor">
+                <img src="D:\proyecto\Lamborghini6.jpg" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+                <p class="descripcion"><strong><span style="color: gray;">Lamborghini Aventador</span></strong></p>
+                <p class="descripcion">Lanzado en 2011, el Aventador es un superdeportivo con motor V12 de 6.5 litros que en su versión inicial ofrecía 690 CV. Su versión más extrema, el Aventador SVJ, llegó a 759 CV y estableció récords en circuitos como Nürburgring.</p>
+            </td>
+            <td align="center" class="contenedor">
+                <img src="D:\proyecto\Lamborghini7.jpg" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+                <p class="descripcion"><strong><span style="color: gray;">Lamborghini Huracán Performante</span></strong></p>
+                <p class="descripcion">Introducido en 2016, el Huracán Performante es una versión mejorada del Huracán estándar, con un motor V10 de 5.2 litros que produce 640 CV. Su sistema aerodinámico activo le permitió batir récords en pistas como Nürburgring.</p>
+            </td>
+            <td align="center" class="contenedor">
+                <img src="D:\proyecto\Lamborghini8.jpg" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+                <p class="descripcion"><strong><span style="color: gray;">Lamborghini Veneno</span></strong></p>
+                <p class="descripcion">Creado para conmemorar el 50 aniversario de Lamborghini en 2013, el Veneno es uno de los modelos más exclusivos, con solo 13 unidades fabricadas. Cuenta con un motor V12 de 6.5 litros y 750 CV, capaz de alcanzar 355 km/h.</p>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function mostrarSoloEsta(imagenSeleccionada) {
+            var contenedores = document.querySelectorAll(".contenedor");
+            var contenedorSeleccionado = imagenSeleccionada.closest(".contenedor");
+            
+            if (imagenSeleccionada.classList.contains("grande")) {
+                contenedores.forEach(cont => cont.classList.remove("ocultar"));
+                imagenSeleccionada.classList.remove("grande");
+            } else {
+                contenedores.forEach(cont => {
+                    if (cont !== contenedorSeleccionado) {
+                        cont.classList.add("ocultar");
+                    }
+                });
+                imagenSeleccionada.classList.add("grande");
+            }
+        }
+    </script>
+</body>
+</html>
