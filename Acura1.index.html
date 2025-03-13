@@ -1,0 +1,91 @@
+<html>
+<HTML lang="es">
+<head>
+     <meta charset="UTF-8">
+     <title>Acura</title>
+     <style>
+        .zoom {
+            width: 150px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .zoom.grande {
+            width: 400px;
+            display: block;
+            margin: auto;
+        }
+        .ocultar {
+            display: none;
+        }
+     </style>    
+</head>
+<body>
+     <h1>Acura</h1>
+
+<table border="1">
+    <tr>
+	<td align="center" class="contenedor">
+ 	     <img src="D:\proyecto\Acura.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: orange;"> The Acura NSX </span> </strong> </p>
+             <p class="descripcion">Is an exotic sports car with room for two people. Power comes from a gas-electric hybrid drivetrain that features two electric motors driving the front wheels. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Acura8.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: orange;"> Acura TLX Type S </span> </strong> </p>
+             <p class="descripcion">Sedán deportivo con un motor V6 turbo de 3.0 litros y 355 hp. Tiene tracción SH-AWD y frenos Brembo, lo que lo hace ideal para quienes buscan desempeño y lujo. </p>
+        </td>
+	<td align="center" class="contenedor">
+	     <img src="D:\proyecto\Acura6.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: orange;"> Acura Integra Type S </span> </strong> </p>
+             <p class="descripcion">Regreso del icónico modelo con motor 2.0L turbo de 320 hp, suspensión adaptativa y caja manual de 6 velocidades, diseñado para entusiastas de la conducción. </p> 
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Acura3.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: orange;"> Acura TLX A-Spec </span> </strong> </p>
+             <p class="descripcion">Versión más deportiva del TLX con motor 2.0L turbo de 272 hp, detalles aerodinámicos agresivos y un interior premium con cuero Milano y Ultrasuede. </p>
+       </td>
+       </tr>
+       <tr>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Acura4.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: orange;"> Acura MDX Type S </span> </strong> </p>
+             <p class="descripcion">SUV deportiva con un motor V6 turbo de 355 hp y suspensión de doble horquilla. Ofrece espacio, lujo y un manejo dinámico​. </p>
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Acura5.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: orange;"> Acura RDX A-Spec </span> </strong> </p>
+             <p class="descripcion">SUV compacta con motor 2.0L turbo de 272 hp y tracción SH-AWD, combinando estilo deportivo y tecnología avanzada. </p>
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Acura2.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: orange;"> Acura RSX (histórico) </span> </strong> </p>
+             <p class="descripcion">Deportivo compacto de los años 2000 con motor 2.0L VTEC y hasta 210 hp en su versión Type S, conocido por su gran maniobrabilidad y popularidad entre los entusiastas​. </p>
+       </td>
+       <td align="center" class="contenedor">
+	     <img src="D:\proyecto\Acura7.jpg" width="150" class="zoom" onclick="mostrarSoloEsta(this)"><br>
+	     <p class="descripcion"><strong> <span style="color: orange;"> Acura nsx 2019 </span> </strong> </p>
+             <p class="descripcion">Es un superdeportivo híbrido de alto rendimiento que combina un motor V6 biturbo de 3.5 litros con tres motores eléctricos.</p>
+	</td>
+    </tr>
+</table>
+
+<script>
+        function mostrarSoloEsta(imagenSeleccionada) {
+            var contenedores = document.querySelectorAll(".contenedor");
+            var contenedorSeleccionado = imagenSeleccionada.closest(".contenedor");
+            
+            if (imagenSeleccionada.classList.contains("grande")) {
+                contenedores.forEach(cont => cont.classList.remove("ocultar"));
+                imagenSeleccionada.classList.remove("grande");
+            } else {
+                contenedores.forEach(cont => {
+                    if (cont !== contenedorSeleccionado) {
+                        cont.classList.add("ocultar");
+                    }
+                });
+                imagenSeleccionada.classList.add("grande");
+            }
+        }
+</script>
+</body>
+</html>
